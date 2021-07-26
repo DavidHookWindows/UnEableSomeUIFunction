@@ -1,4 +1,4 @@
-// dllmain.cpp : ¶¨Òå DLL Ó¦ÓÃ³ÌĞòµÄÈë¿Úµã¡£
+// dllmain.cpp : å®šä¹‰ DLL åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹ã€‚
 #include "stdafx.h"
 #include "easyhook.h"
 #include "DriverShared.h"
@@ -204,7 +204,7 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 
 	if (HC_ACTION == nCode)
 	{
-		if (wParam == 0xd)
+		if (wParam == 0xd || wParam == 0x20)
 		{
 			HWND hwnd = GetForegroundWindow();
 			if (hwnd != NULL)
